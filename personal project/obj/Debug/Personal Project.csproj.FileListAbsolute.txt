@@ -1,0 +1,28 @@
+c:\users\naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\bin\Debug\Personal Project.exe.config
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\bin\Debug\Personal Project.exe
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\bin\Debug\Personal Project.pdb
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\MainWindow.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\MainWindow.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\App.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Personal Project_MarkupCompile.cache
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Personal Project.g.resources
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Personal_Project.Properties.Resources.resources
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Personal Project.csproj.GenerateResource.Cache
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Personal Project.exe
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Personal Project.pdb
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\ControlStyles.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\App.baml
+C:\Users\Naufal\Documents\Visual Studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Task.baml
+C:\Users\Naufal\Documents\Visual Studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Task.g.cs
+C:\Users\Naufal\Documents\Visual Studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Personal Project_MarkupCompile.lref
+C:\Users\Naufal\Documents\Visual Studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Settings.baml
+C:\Users\Naufal\Documents\Visual Studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Settings.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\NewTaskWindow.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\NewTaskWindow.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\FutureTask.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\FutureTask.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Personal Project.csprojResolveAssemblyReference.cache
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\BlockedAppMarker.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\BlockedAppMarker.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Debug\Personal Project.csproj.ResolveComReference.cache

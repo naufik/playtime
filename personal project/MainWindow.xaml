@@ -1,0 +1,68 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:t="clr-namespace:Personal_Project" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Personal_Project.MainWindow"
+        Title="PlayTime" Height="520" Width="280" 
+        WindowStyle="None"
+        AllowsTransparency='True'
+        ResizeMode="CanResizeWithGrip" BorderBrush="#FFC1C1C1" BorderThickness="2,2,2,6" Background="#FFF1F1F1" Initialized="form_initialize">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="28"/>
+			<RowDefinition Height="14*"/>
+			<RowDefinition Height="9*"/>
+			<RowDefinition Height="24"/>
+		</Grid.RowDefinitions>
+		<GroupBox Grid.Row="1" BorderBrush="Black" FontSize="18.667" Style="{DynamicResource BoxStyle}" Foreground="#FFEE7A2B" FontWeight="Light">
+			<GroupBox.Header>
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="25"/>
+					</Grid.ColumnDefinitions>
+					<TextBlock Grid.Column="0" Text="CURRENT TASKS"/>
+					<Button x:Name="NewTask" Grid.Column="1" Style="{DynamicResource PlusButton}" Click="TaskCreate"/>
+				</Grid>
+			</GroupBox.Header>
+			<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden">
+			<ItemsControl Background="White" x:Name="CurrentTasksBox" Margin="0"/>
+			</ScrollViewer>
+		</GroupBox>
+		<GroupBox Grid.Row="2" BorderBrush="Black" Style="{DynamicResource BoxStyle}" Foreground="#FF1C78AC" FontWeight="Light" FontSize="14.667">
+			<GroupBox.Header>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="FUTURE TASKS"/>
+					<Button Margin="5,2,0,3" Style="{DynamicResource infoButton}">
+						<Button.Content>
+							<Image Source="info.png" Height="16" OpacityMask="Black"/>
+						</Button.Content>
+						<Button.ToolTip>
+							<TextBlock>Tasks listed here will not prevent you to launch games.</TextBlock>
+						</Button.ToolTip>
+					</Button>
+				</StackPanel>
+			</GroupBox.Header>
+			<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden">
+			<ItemsControl Background="White" x:Name="UpcomingTasksBox" Margin="0"/>
+			</ScrollViewer>
+		</GroupBox>
+		<Border BorderThickness="0,0,0,0" Background="#FFF1F1F1" BorderBrush="#FFD8D8D8" MouseDown="Header_Drag">
+			<Grid>
+				<Button Content="aloha" Height="28" Width="28" HorizontalAlignment="Right" Margin="0,0,0,0" Click="CloseButton_Click" Style="{DynamicResource MinimizeButtonStyle}"/>
+				<Label Content="Playtime" HorizontalAlignment="Left" Width="171" FontSize="14.667" Foreground="Black" />
+			</Grid>
+		</Border>
+		<StackPanel Margin="0,0,0,0" Grid.Row="3" Orientation="Horizontal">
+		<Button BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Left" Margin="3,2,0,2" Grid.Row="3" Width="Auto" FontWeight="Light" FontSize="14.667" Foreground="#FF727272" Click="OpenSettings">
+			<Button.Content>
+				<Grid Background="Transparent">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="20"/>
+					</Grid.ColumnDefinitions>
+					<Image Grid.Column="0" Source="gear settings.png" Margin="-2,0,-2,-2" Height="18" VerticalAlignment="Top"/>
+					</Grid>
+			</Button.Content>
+		</Button>
+		</StackPanel>
+	</Grid>
+</Window>

@@ -1,0 +1,28 @@
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\bin\Release\Personal Project.exe.config
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Personal Project.csproj.ResolveComReference.cache
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\bin\Release\Personal Project.exe
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\bin\Release\Personal Project.pdb
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\BlockedAppMarker.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\ControlStyles.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\FutureTask.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\NewTaskWindow.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Task.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\App.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\BlockedAppMarker.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\FutureTask.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\MainWindow.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\NewTaskWindow.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Settings.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Task.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\App.g.cs
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Personal Project_MarkupCompile.cache
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Personal Project_MarkupCompile.lref
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\MainWindow.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Settings.baml
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Personal Project.g.resources
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Personal_Project.Properties.Resources.resources
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Personal Project.csproj.GenerateResource.Cache
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Personal Project.exe
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Personal Project.pdb
+C:\Users\Naufal\documents\visual studio 2013\Projects\Personal Project\Personal Project\obj\Release\Personal Project.csprojResolveAssemblyReference.cache

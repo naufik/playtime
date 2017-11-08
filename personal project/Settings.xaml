@@ -1,0 +1,23 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:t="clr-namespace:Personal_Project"
+	x:Class="Personal_Project.Settings"
+	x:Name="Window"
+	Title="Settings" 
+	Width="640" Height="480" WindowStyle="ToolWindow" Loaded="load">
+
+	<Grid x:Name="LayoutRoot">
+		<TabControl Margin="0,0,0,1">
+			<TabItem Header="Blocked Applications">
+				<Grid Background="White">
+                    <TextBlock x:Name="noobfriendly" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DarkGray" Text="Drag your applications and shortcuts here."/>
+					<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" AllowDrop="true">
+                        <ItemsControl x:Name="BlockedAppsContainer" Margin="0,0,0,0" Drop="drop" AllowDrop="True" Background="Transparent"/>
+                    </ScrollViewer>
+                    
+                </Grid>
+			</TabItem>
+        </TabControl>
+	</Grid>
+</Window>

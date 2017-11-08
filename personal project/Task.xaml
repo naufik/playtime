@@ -1,0 +1,53 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Personal_Project.Task"
+	x:Name="TaskEntry"
+	Height="40" Width="Auto"
+	CheckBox.Checked="chk">
+	<UserControl.Resources>
+		<Style x:Key="TaskBox" TargetType="{x:Type CheckBox}">
+			<Style.Setters>
+				<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type CheckBox}">
+						<Grid>
+							<Ellipse Height="Auto" Width="Auto" Stretch="Fill" Fill="Transparent" Stroke="#FFEE7A2B" StrokeThickness="2"/>
+							<Ellipse x:Name="InnerCircle" Height="Auto" Width="Auto" Margin="4" Fill="#FFEE7A2B" Stretch="Fill"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+								<Trigger Property="IsChecked" Value="False">
+										<Setter Property="Fill" TargetName="InnerCircle" Value="Transparent"/>
+								</Trigger>
+								<MultiTrigger>
+									<MultiTrigger.Conditions>
+										<Condition Property="IsMouseOver" Value="True"/>
+										<Condition Property="IsChecked" Value="False"/>
+									</MultiTrigger.Conditions>
+										<Setter Property="Fill" TargetName="InnerCircle" Value="DarkGray"/>
+								</MultiTrigger>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>	
+				</Setter.Value>
+				</Setter>
+			</Style.Setters>
+		</Style>
+	</UserControl.Resources>
+
+	<Grid x:Name="Layout" Height="40" Width="Auto">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="7*"/>
+			<RowDefinition Height="5*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="30"/>
+			<ColumnDefinition Width="Auto"/>
+		</Grid.ColumnDefinitions>
+        <CheckBox x:Name="check" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Height="30" IsChecked="{Binding Path=IsChecked, ElementName=TaskEntry}"  Style="{DynamicResource TaskBox}" Unchecked="uchk" Click="click"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" FontWeight="Medium" FontSize="16" Foreground="#FFEE7A2B" HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Bottom" Text="{Binding Path=TaskName, ElementName=TaskEntry}"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,0,0,0" Text="{Binding Path=TaskTime, StringFormat='{}{0:MMMM dd, yyyy - hh:mm tt}', ElementName=TaskEntry}" FontSize="13.333"/>
+	</Grid>
+</UserControl>

@@ -1,0 +1,23 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Personal_Project.BlockedAppMarker"
+	x:Name="AppBlocker" Width="Auto" Height="48">
+	<Grid Background="White" x:Name="LayoutRoot">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition x:Name="hey" Width="48"/>
+			<ColumnDefinition Width="24"/>
+			<ColumnDefinition Width="1*"/>
+		</Grid.ColumnDefinitions>
+		<Border Background="White">
+			<Button Grid.Column="0" Style="{DynamicResource RemoveBlockedAppButton}" Click="delete"/>
+		</Border>
+		<Image x:Name="imageName" Grid.Column="1"  />
+		<Border Background="White" Grid.Column="2">
+			<TextBlock VerticalAlignment="Center" Background="White" Text="{Binding Path=AppPath, ElementName=AppBlocker}" HorizontalAlignment="Left" Grid.Column="2" Margin="8,0,0,0"/>
+		</Border>
+	</Grid>
+</UserControl>

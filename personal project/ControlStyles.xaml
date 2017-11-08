@@ -1,0 +1,275 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<Style x:Key="FocusVisual">
+		<Setter Property="Control.Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+	<SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+	<SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+	<SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+	<SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+	<SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+	<SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+	<SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+	<SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+
+	<Style x:Key="MinimizeButtonStyle" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" SnapsToDevicePixels="true" Background="Transparent">
+						<Grid Width="14" Height="14">
+						<Polygon x:Name="icon" Stretch="Fill" Points="0.1,0 0.25,0 0.5,0.4 0.75,0 0.9,0 0.6,0.5, 0.9,1 0.75,1 0.5,0.6 0.25,1 0.1,1 0.4,0.5" Fill="Black" Visibility="Visible"/>
+
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="border" Value="DarkGray"/>
+							<Setter Property="Fill" TargetName="icon" Value="Maroon"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+		<Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+						<ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsDefaulted" Value="true">
+							<Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="true">
+							<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+							<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+						</Trigger>
+						<Trigger Property="IsPressed" Value="true">
+							<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+							<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+							<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+							<Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="BoxStyle" TargetType="{x:Type GroupBox}">
+		<Setter Property="Template">
+			<Setter.Value>
+			<ControlTemplate TargetType="{x:Type GroupBox}">
+				<Grid Height="Auto">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="0.85"/>
+						<RowDefinition Height="8*"/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="5*"/>
+					</Grid.ColumnDefinitions>
+					<Border x:Name="Header" Background="Transparent">
+						<ContentPresenter ContentSource="Header"/>
+					</Border>
+					<Border x:Name="Separator" Background="{TemplateBinding Foreground}" Grid.Row="1" Grid.Column="1"/>
+					<Border x:Name="Content" Background="Transparent" Grid.Row="2">
+						<ContentPresenter ContentSource="Content" Margin="0,4,0,0"/>
+					</Border>
+				</Grid>
+			</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Margin" Value="3,3,3,3"/>
+	</Style>
+    <Style x:Key="TextButtons" TargetType="{x:Type Button}">
+        <Setter Property="Foreground" Value="#FFEE7A2B"/>
+        <Setter Property="Template">
+			<Setter.Value>
+			<ControlTemplate TargetType="{x:Type Button}">
+				<Border x:Name="bg" Background="Transparent">
+					<ContentPresenter ContentSource="Content" Margin="4,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				</Border>
+			<ControlTemplate.Triggers>
+			<Trigger Property="IsMouseOver" Value="True">
+				<Setter TargetName="bg" Property="Background" Value="LightGray"/>
+			</Trigger>
+			<Trigger Property="IsPressed" Value="True">
+				<Setter TargetName="bg" Property="Background" Value="DarkGray"/>
+			</Trigger>
+		</ControlTemplate.Triggers>
+			</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger Property="IsEnabled" Value="False">
+				<Setter Property="Foreground" Value="DarkGray"/>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style x:Key="infoButton" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<ContentPresenter x:Name="c" ContentSource="Content"/>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="False">
+							<Setter TargetName="c" Property="Opacity" Value="0.6"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="PlusButton" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid Background="Transparent" Margin="4,4,4,4">
+                        <Polygon x:Name="Icon" Stretch="Fill" Fill="#FFEE7A2B" Points="0.45,0 0.55,0 0.55,0.45 1,0.45 1,0.55 0.55,0.55 0.55,1 0.45,1 0.45,0.55 0,0.55 0,0.45 0.45,0.45"/>
+					</Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="TaskNameBoxStyle" TargetType="{x:Type TextBox}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type TextBox}">
+					<Grid>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="1*"/>
+						<RowDefinition Height="1.5"/>
+					</Grid.RowDefinitions>
+					<Border Background="Transparent" Grid.Row="0">
+						<TextBlock x:Name="backtext" FontSize="21.333" Foreground="Transparent" Text="New Task..." VerticalAlignment="Bottom"/>
+					</Border>
+					<ScrollViewer x:Name="PART_ContentHost" Grid.Row="0" Margin="0"/>
+					<Border Background="{TemplateBinding Foreground}" Grid.Row="1"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="Text" Value="">
+							<Setter Property="Foreground" TargetName="backtext" Value="LightGray"/>
+						</Trigger> 
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="CaretBrush" Value="Black"/>
+	</Style>
+	<Style x:Key="timeboxstyle" TargetType="{x:Type TextBox}">
+		<Setter Property="Background" Value="#FFEDEDED"/>
+		<Setter Property="Foreground" Value="Gray"/>
+		<Setter Property="FontWeight" Value="Light"/>
+	</Style>
+	<Style x:Key="AMPMRadio" TargetType="{x:Type RadioButton}">
+		<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type RadioButton}">
+				<Grid>
+					<ContentPresenter ContentSource="Content" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+				</Grid>
+			</ControlTemplate>
+		</Setter.Value>
+		</Setter>
+		<Setter Property="FontWeight" Value="Semibold"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="Foreground" Value="Gray"/>
+		<Style.Triggers>
+			<Trigger Property="IsChecked" Value="True">
+				<Setter Property="Foreground" Value="#FFEE7A2B"/>
+				<Setter Property="Opacity" Value="1"/>
+			</Trigger>
+			<Trigger Property="IsChecked" Value="False">
+				<Setter Property="Opacity" Value="0.5"/>
+			</Trigger>
+			<MultiTrigger>
+				<MultiTrigger.Conditions>
+					<Condition Property="IsChecked" Value="False"/>
+					<Condition Property="IsMouseOver" Value="True"/>
+				</MultiTrigger.Conditions>
+				<Setter Property="Opacity" Value="1"/>
+				<Setter Property="FontSize" Value="16"/>
+			</MultiTrigger>
+		</Style.Triggers>
+	</Style>
+	<Style x:Key="FutureDismiss" TargetType="{x:Type CheckBox}">
+	<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type CheckBox}">
+					<Border x:Name="border" SnapsToDevicePixels="true" Background="Transparent">
+						<Grid Width="16" Height="16">
+						<Ellipse x:Name="icon" Stretch="Fill" StrokeThickness="2" Stroke="#FF1C78AC" Visibility="Visible"/>
+						<Ellipse x:Name="innericon" Stretch="Fill" Margin="3" Fill="#FF1C78AC"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="False">
+							<Setter TargetName="innericon" Property="Fill" Value="Transparent"/>
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition Property="IsMouseOver" Value="True"/>
+								<Condition Property="IsChecked" Value="False"/>
+							</MultiTrigger.Conditions>
+							<Setter Property="Fill" TargetName="innericon" Value="DarkGray"/>
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+	</Setter></Style>
+	<Style x:Key="RemoveBlockedAppButton" TargetType="{x:Type Button}">
+		<Setter Property="Template">
+		<Setter.Value>
+			<ControlTemplate TargetType="{x:Type Button}">
+				<Grid Background="Transparent">
+					<Polygon Margin="16" x:Name="icon" Stretch="Fill" Points="0.1,0 0.25,0 0.5,0.4 0.75,0 0.9,0 0.6,0.5, 0.9,1 0.75,1 0.5,0.6 0.25,1 0.1,1 0.4,0.5" Fill="Red" Visibility="Visible"/>
+				</Grid>
+				<ControlTemplate.Triggers>
+					<Trigger Property="IsMouseOver" Value="False">
+						<Setter Property="Opacity" Value="0.4"/>
+					</Trigger>
+				</ControlTemplate.Triggers>
+			</ControlTemplate>
+		</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="AppHolder" TargetType="{x:Type ItemsControl}">
+		<Setter Property="Template">
+		<Setter.Value>
+		<ControlTemplate TargetType="{x:Type ItemsControl}">
+				<Grid Background="White">
+					<TextBlock Margin="0,0,0,0" Width="Auto" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="LightGray" Text="Drag and drop applications (or shortcuts) you want to block here."/>
+					<ContentPresenter Margin="0,0,0,0" Width="Auto" Height="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+				</Grid>
+		</ControlTemplate>
+		</Setter.Value></Setter>
+	</Style>
+</ResourceDictionary>
